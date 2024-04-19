@@ -46,6 +46,8 @@
             NSString *endDateString = [RCTAppleHealthKit buildISO8601StringFromDate:sample.endDate];
 
             NSDictionary *elem = @{
+                    @"sourceName" : [[[sample sourceRevision] source] name],
+                    @"sourceId" : [[[sample sourceRevision] source] bundleIdentifier],
                     @"startDate" : startDateString,
                     @"endDate" : endDateString,
             };
